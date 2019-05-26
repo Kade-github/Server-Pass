@@ -1,3 +1,7 @@
+# READ ME
+This plugin is practicly useless until I fix it, or someone does idk.
+So yeah just don't use it.
+
 # Server-Pass
 Protect your server with a password!
 (Even tho you should use steamid auth, you can still use this tho)
