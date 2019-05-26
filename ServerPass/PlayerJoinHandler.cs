@@ -28,8 +28,8 @@ namespace ServerPass
         {
             if (!verfied.Contains(ev.Player))
             {
-                ev.Player.PersonalBroadcast(10, "<color=red>Look in you're console!</color>", true);
-                ev.Player.SendConsoleMessage("You have 10 seconds to type the command `passwd <password>` replace password with the password to enter the server!", "red");
+                ev.Player.PersonalBroadcast(10, "<color=red>Look in your console!</color>", true);
+                ev.Player.SendConsoleMessage("You have 10 seconds to type the command `passwd <password>` (replace password with the actual password) to enter the server!", "red");
                 new Thread(() =>
                 {
                     Thread.Sleep(10000);
@@ -48,7 +48,8 @@ namespace ServerPass
             // If the default password is present that's a no no
             if (plugin.GetConfigString("sp_password") == "none")
             {
-                plugin.Info("YOU ARE NOT BEING SECURE, YOU'RE PASSWORD IS `none` PLEASE CHANGE THE DEFAULT PASSWORD!");
+                plugin.Info("YOUR PASSWORD IS `none`; PLEASE CHANGE THE DEFAULT PASSWORD!");
+                plugin.Info("This plugin will be disabled until you pick a better password!");
                 // So disable the shit ass plugin
                 plugin.PluginManager.DisablePlugin(plugin);
             }
